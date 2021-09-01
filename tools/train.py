@@ -150,7 +150,10 @@ def main():
     meta['seed'] = args.seed
     meta['config_name'] = osp.basename(args.config)
     meta['work_dir'] = osp.basename(cfg.work_dir.rstrip('/\\'))
-
+    print("==========================")
+    print("cfg.model")
+    print(cfg.model)
+    print('==========================')
     model = build_model(
         cfg.model,
         train_cfg=cfg.get('train_cfg'),
